@@ -9,11 +9,13 @@ let humid = document.getElementById('h');
 let w = document.getElementById('w');
 let desc = document.getElementById('description');
 
+let mainIcon = document.getElementById('mainIcon');
+
 const API_KEY = 'f4d2ec0aceb6adaf6e9866e242642310';
 //test
 let query = 'El Monte';
-let units = 'imperial';
-const weatherBASE_URL = `https://api.openweathermap.org/data/2.5/weather?q=${query}&appid=${API_KEY}&units=${units}`;
+
+const weatherBASE_URL = `https://api.openweathermap.org/data/2.5/weather?q=${query}&appid=${API_KEY}&units=imperial`;
 
 const cnt = 5; //for 5 days
 
@@ -23,7 +25,7 @@ const getWeatherData = () => {
 
 const getForecastData = (lat, lon) => {
   //forecast url
-  const forecastBASE_URL = `https://api.openweathermap.org/data/2.5/forecast?units=metric&appid=${API_KEY}&cnt=${cnt}&lat=${lat}&lon=${lon}`;
+  const forecastBASE_URL = `https://api.openweathermap.org/data/2.5/forecast?units=imperial&appid=${API_KEY}&cnt=${cnt}&lat=${lat}&lon=${lon}`;
   return fetch(forecastBASE_URL)
     .then((res) => res.json())
     .then(console.log('Forecast API', forecastBASE_URL));
@@ -56,13 +58,15 @@ getWeatherData().then((weatherData) => {
       console.log('Wind', wind.speed);
       cityName.textContent = city.name;
       country.textContent = city.country;
-      temp.textContent = main.temp;
+      temp.textContent = Math.floor(main.temp);
       desc.textContent = description;
-      feelsLike.textContent = main.feels_like;
+      feelsLike.textContent = Math.floor(main.feels_like);
       humid.textContent = main.humidity;
-      w.textContent = wind.speed;
+      w.textContent = Math.floor(wind.speed);
       console.log('Temp Rounded', Math.floor(main.temp));
       //   wind.textContent;
+      let iconUrl = `https://openweathermap.org/img/wn/${icon}@2x.png`;
+      mainIcon.src = iconUrl;
     });
   });
 });
