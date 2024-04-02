@@ -27,3 +27,31 @@
 .form-input {
   width: 100%;
 }
+
+aside {
+  border-width: 2px;
+  width: 250px;
+  margin-right: 10%;
+  /* border-color: rgb(245, 238, 238); */
+}
+
+li {
+  border-width: 2px;
+  height: 45px;
+  color: white;
+  padding-left: 2px;
+  border-top: 5px;
+  border-bottom: 5px;
+  text-align: center;
+}
+
+.search-title {
+  padding-bottom: 20px;
+  text-align: center;
+}
+button {
+  transition-duration: 0.4s;
+  background-color: rgb(29, 53, 131);
+  width: 100%;
+  height: 40px;
+}

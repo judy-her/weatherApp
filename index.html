@@ -22,6 +22,7 @@
     <title>Weather Dashboard</title>
   </head>
   <body class="gradient-new">
+   
     <!-- header -->
     <header class="py-4">
       <h1 class="text-4xl text-center font-large text-green-200 font-playpen">
@@ -31,7 +32,17 @@
     <!-- search div-->
     <div class="flex flex-row justify-center my-6 mx-12">
       <!--  search input -->
-      <div class="flex flex-row w-3/4 items-center justify-center space-x-4">
+      <aside class="flex flex-col">
+        <div class="col-span-2">
+          <h1 class="text-white text-2xl font-medium search-title">Saved weather</h1>
+        </div>
+        <ul>
+          <li><button>London</button></li>
+          <li><button>Istanbul</button></li> <li><button>Amsterdam</button></li> <li><button>Rome</button></li>
+        </ul>
+       
+      </aside>
+      <div class="flex flex-row w-1/2 items-center justify-center space-x-4">
         <input
           type="text"
           placeholder="search for city...."
@@ -39,31 +50,18 @@
         />
       </div>
       <!-- temp -->
-      <div class="flex flex-row w-1/4 items-center justify-center">
-        <button
-          name="metric"
-          class="text-xl text-white font-light font-playpen"
-        >
-          °C
-        </button>
-        <p class="text-xl text-white mx-1">|</p>
-        <button
-          name="imperial"
-          class="text-xl text-white font-light font-playpen"
-        >
-          °F
-        </button>
+      <div class="flex flex-row  items-center justify-center">
+       
+     
+      
       </div>
     </div>
     <!-- date div -->
     <div>
       <!--  Time div  -->
       <div class="flex items-center justify-center my-6">
-        <p
-          id="dateMain"
-          class="text-white text-xl font-extralight font-playpen"
-        >
-          Saturday, 2 March 2024 | Local Time: 12:46 PM
+        <p id="" class="text-white text-xl font-extralight font-playpen">
+          <span id="date"></span>
         </p>
       </div>
 
@@ -118,28 +116,8 @@
         </div>
       </div>
 
-      <!--  div for sunrise, sunset  -->
-      <div
-        class="flex flex-row items-center justify-center space-x-2 text-white text-sm py-3"
-      >
-        <p class="font-light">
-          Rise: <span class="font-medium ml-1">06:45 AM</span>
-        </p>
-        <p class="font-light">|</p>
-
-        <p class="font-light">
-          Set: <span class="font-medium ml-1">07:35 PM</span>
-        </p>
-        <p class="font-light">|</p>
-
-        <p class="font-light">
-          High: <span class="font-medium ml-1">45°</span>
-        </p>
-        <p class="font-light">|</p>
-
-        <p class="font-light">Low: <span class="font-medium ml-1">40°</span></p>
-      </div>
-    </div>
+     
+    
 
     <!-- 5 day forecast section -->
     <div>
@@ -150,7 +128,7 @@
       <!-- daily -->
       <div class="flex flex-row items-center justify-between text-white mx-12">
         <div class="flex flex-col items-center justify-center">
-          <p class="font-light text-sm">04:30 PM</p>
+          <p class="font-light text-sm">Day 1</p>
           <img
             src="http://openweathermap.org/img/wn/02d@2x.png"
             class="w-12 my-1"
@@ -160,7 +138,7 @@
         </div>
 
         <div class="flex flex-col items-center justify-center">
-          <p class="font-light text-sm">04:30 PM</p>
+          <p class="font-light text-sm">Day 2</p>
           <img
             src="http://openweathermap.org/img/wn/02d@2x.png"
             class="w-12 my-1"
@@ -170,7 +148,7 @@
         </div>
 
         <div class="flex flex-col items-center justify-center">
-          <p class="font-light text-sm">04:30 PM</p>
+          <p class="font-light text-sm">Day 3</p>
           <img
             src="http://openweathermap.org/img/wn/02d@2x.png"
             class="w-12 my-1"
@@ -180,7 +158,7 @@
         </div>
 
         <div class="flex flex-col items-center justify-center">
-          <p class="font-light text-sm">04:30 PM</p>
+          <p class="font-light text-sm">Day 4</p>
           <img
             src="http://openweathermap.org/img/wn/02d@2x.png"
             class="w-12 my-1"
@@ -190,7 +168,7 @@
         </div>
 
         <div class="flex flex-col items-center justify-center">
-          <p class="font-light text-sm">04:30 PM</p>
+          <p class="font-light text-sm">Day 5</p>
           <img
             src="http://openweathermap.org/img/wn/02d@2x.png"
             class="w-12 my-1"

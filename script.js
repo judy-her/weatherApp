@@ -3,13 +3,16 @@ let cityName = document.getElementById('cityName');
 let country = document.getElementById('country');
 let dateMain = document.getElementById('dateMain');
 let icon = document.getElementById('icon');
+let mainIcon = document.getElementById('mainIcon');
 let temp = document.getElementById('temp');
 let feelsLike = document.getElementById('feelsLike');
 let humid = document.getElementById('h');
 let w = document.getElementById('w');
 let desc = document.getElementById('description');
+let dateEl = document.getElementById('date');
 
-let mainIcon = document.getElementById('mainIcon');
+let cityInput = document.getElementById('cityInput');
+// console.log(cityInput.value);
 
 const API_KEY = 'f4d2ec0aceb6adaf6e9866e242642310';
 //test
@@ -47,6 +50,11 @@ getWeatherData().then((weatherData) => {
       const { main, weather, wind } = item;
       const { description, icon } = weather[0];
 
+      // today
+      let date = new Date();
+      // let forecastDate = new Date(dt * 1000);
+      console.log('Today is', date);
+      dateEl.textContent = date;
       console.log('Main from Forecast:', main);
       console.log('Weather from Forecast:', weather);
       console.log('City', city.name);
@@ -65,8 +73,9 @@ getWeatherData().then((weatherData) => {
       w.textContent = Math.floor(wind.speed);
       console.log('Temp Rounded', Math.floor(main.temp));
       //   wind.textContent;
+      console.log('Weather Icon:', icon);
       let iconUrl = `https://openweathermap.org/img/wn/${icon}@2x.png`;
-      mainIcon.src = iconUrl;
+      icon.src = iconUrl;
     });
   });
 });
