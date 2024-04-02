@@ -26,7 +26,7 @@ and `npm run build`
 To start this Weather App install the dependencies and npm run build. Type in any location in the world. If you want to be more specific you can type Los Angeles, US, for example to get the US location.
 For full access simply click on this link: https://github.com/judy-her/sql-employee-tracker
 
-![sql-tracker](assets/images/Screenshot-sql-empTracker.png)
+![weather-app](assets/weather-app.png)
 
 ## License
 
