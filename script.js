@@ -13,7 +13,7 @@ let mainIcon = document.getElementById('mainIcon');
 
 const API_KEY = 'f4d2ec0aceb6adaf6e9866e242642310';
 //test
-let query = 'El Monte';
+let query = 'Los Angeles';
 
 const weatherBASE_URL = `https://api.openweathermap.org/data/2.5/weather?q=${query}&appid=${API_KEY}&units=imperial`;
 
