@@ -28,6 +28,12 @@
       <h1 class="text-4xl text-center font-large text-green-200 font-playpen">
         Weather Dashboard
       </h1>
+         <!--  Time div  -->
+         <div class="flex items-center justify-center my-6">
+          <p id="" class="text-white text-xl font-extralight font-playpen">
+            <span id="date"></span>
+          </p>
+        </div>
     </header>
     <!-- search div-->
     <div class="flex flex-row justify-center my-6 mx-12">
@@ -58,12 +64,7 @@
     </div>
     <!-- date div -->
     <div>
-      <!--  Time div  -->
-      <div class="flex items-center justify-center my-6">
-        <p id="" class="text-white text-xl font-extralight font-playpen">
-          <span id="date"></span>
-        </p>
-      </div>
+   
 
       <!--  city and country div  -->
       <div class="flex flex-items justify-center my-3">
@@ -94,20 +95,20 @@
 
         <div class="flex flex-col space-y-2">
           <!--  div for feels like, himidity, and wind   -->
-          <div class="flex font-light text-sm items-center justify-center">
-            <p class="mr-1">
+          <div class="flex font-light text-m items-center justify-center">
+            <p class="mr-1 ">
               Feels Like:
               <span id="feelsLike" class="font-medium ml-1">32°</span>°F
             </p>
           </div>
 
-          <div class="flex font-light text-sm items-center justify-center">
+          <div class="flex font-light text-m items-center justify-center">
             <p class="mr-1">
               Humidity:
               <span id="h" class="font-medium ml-1">50% </span>%
             </p>
           </div>
-          <div class="flex font-light text-sm items-center justify-center">
+          <div class="flex font-light text-m items-center justify-center">
             <p class="mr-1">
               Wind:
               <span id="w" class="font-medium ml-1">3 </span> mph
@@ -117,7 +118,6 @@
       </div>
 
      
-    
 
     <!-- 5 day forecast section -->
     <div>
@@ -135,6 +135,7 @@
             alt=""
           />
           <p class="font-medium">40°</p>
+          
         </div>
 
         <div class="flex flex-col items-center justify-center">
